@@ -1,8 +1,12 @@
 <?php
-    if ($_POST) {
-    $output = $_POST["name"];
+    function createButton ($name) {
+        echo "<div class='center'>
+                <button class='input hover blur' id=$name>$name</button>
+              </div>";
+    }
 
-    echo "<h1 id=$output>$output</h1>";
-    // echo var_dump($output);
+    if ($_POST) {
+        $output = $_POST["name"];
+        createButton($output);
     }
  ?>

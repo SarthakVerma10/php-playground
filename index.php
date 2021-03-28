@@ -10,25 +10,11 @@
     <?php
     $heading = 'Form';
 
-    function createButton ($name) {
-      echo "<div class='center'>
-              <button class='input hover blur' id=$name>$name</button>
-            </div>";
-    }
-
     require('carousel.html');
     require('products-carousel.html');
-    //require('form.html');
+    require('form.html');
     //require('buttons.html');
     ?>
-
-<?php
-    if ($_POST) {
-        $output = $_POST["name"];
-        createButton($output);
-    }
- ?>
-
 
 </body>
 
