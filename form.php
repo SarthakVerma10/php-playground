@@ -1,8 +1,10 @@
 <?php
     function createButton ($name) {
-        echo "<div class='center'>
+        echo "
+            <link rel='stylesheet' href='style.css' />
+            <div class='center'>
                 <button class='input hover blur' id=$name>$name</button>
-              </div>";
+            </div>";
     }
 
     if ($_POST) {
