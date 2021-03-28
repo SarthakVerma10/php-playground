@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+  <head>
+    <title>index</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <h1 class="center"><?= $heading ?></h1>
+    <form class="form" method="post" autocomplete="off">
+            <?php $buttonName = 'Okay';
+                  $placeHolder = 'Button Name';
+            ?>
+
+            <input class="input" type="text" name="name" <?= "placeholder=$placeHolder" ?>>
+            <button class="input hover"><?= $buttonName ?></button>
+    </form>
+
+  </body>
+</html>

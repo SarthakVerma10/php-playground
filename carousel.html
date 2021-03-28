@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caraousel</title>
+</head>
+<body>
+    <div class="slide">
+
+        <div id="images" class="center">
+            <img id="1" src="images/background.jpg">
+            <img id="2" src="images/s.jpg" hidden>
+            <img id="3" src="images/l-bg.jpg" hidden>
+        </div>
+
+        <div class="center">
+
+            <button class="input hover" id="prev">Prev</button>
+            <button class="input hover" id="next">Next</button>
+
+        </div>
+
+    </div>
+
+    <script>
+        const total = $("#images").children().length;
+        let index = 1;
+
+        $("#next").click(() => {
+            $("#" + index).hide();
+
+            if (index === total) {
+                index = 1;
+            } else {
+                index++;
+            }
+
+            $("#" + index).fadeIn("slow");
+        })
+
+        $("#prev").click(() => {
+            $("#" + index).hide();
+
+            if (index === 1) {
+                index = total
+            } else {
+                index--;
+            }
+
+            $("#" + index).fadeIn("slow");
+        })
+
+    </script>
+</body>
+</html>

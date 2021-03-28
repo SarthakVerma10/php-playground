@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="moving-products">
+        <div class="flex">
+            <img id="img1" src="./images/background.jpg" alt="">
+            <img id="img2" src="./images/l-bg.jpg" alt="">
+            <img id="img3" src="./images/s-bg.jpg" alt="" hidden>
+            <img id="img4" src="./images/s.jpg" alt="" hidden>
+        </div>
+
+        <div class="center move">
+            <a class="move-btn" id="p"><i class="fas fa-arrow-left"></i></a>
+            <a class="move-btn" id="n"><i class="fas fa-arrow-right"></i></a>
+        </div>
+
+    </div>
+
+    <script>
+        let i = 1;
+        let j = 3;
+        const totalImages = $(".flex").children().length;
+
+        $("#n").click(() => {
+            $("#img" + i).hide();
+
+            if (j === total) {
+               //
+            } else {
+                i++;
+            }
+
+            $("#img" + j).fadeIn("slow");
+            if (j === total) {
+                //
+            } else {
+                j++;
+            }
+
+        })
+
+        $("#p").click(() => {
+            if (i === 1) {
+                //
+            } else {
+                i--;
+            }
+
+            $("#img" + i).fadeIn("slow");
+
+            if (i === 1) {
+                //
+            } else {
+                j--;
+            }
+
+            $("#img" + j).hide();
+        })
+    </script>
+</body>
+</html>
